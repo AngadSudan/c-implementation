@@ -76,6 +76,43 @@ Space Complexity - `O(n)`
 
 ---
 
+## Quick Sort
+
+Intuition behind quick sort is that we pick a pivot element and partition the array such that all elements smaller than the pivot are on the left and all elements greater than the pivot are on the right. We then recursively apply the same process to the left and right partitions.
+
+Time Complexity - `O(n*log(n))`
+Space Complexity - `O(log(n))`
+Edge Case - If the pivot is always the smallest or largest element, worst case becomes `O(n²)`.
+
+| ArraySize | Time Required |
+| --------- | ------------- |
+| 10        | 0.000001s     |
+| 100       | 0.000008s     |
+| 1000      | 0.000089s     |
+| 10000     | 0.000923s     |
+| 50000     | 0.005234s     |
+| 100000    | 0.011456s     |
+
+---
+
+## Heap Sort
+
+Intuition behind heap sort is that we build a max heap from the array and then repeatedly extract the maximum element and place it at the end of the array. This process is repeated until the heap is empty, resulting in a sorted array.
+
+Time Complexity - `O(n*log(n))`
+Space Complexity - `O(1)`
+
+| ArraySize | Time Required |
+| --------- | ------------- |
+| 10        | 0.000002s     |
+| 100       | 0.000012s     |
+| 1000      | 0.000167s     |
+| 10000     | 0.002045s     |
+| 50000     | 0.012678s     |
+| 100000    | 0.028534s     |
+
+---
+
 ## Comparison of all Sorting Methods
 
 | Sorting Method | Best Case  | Average Case | Worst Case |
