@@ -21,7 +21,7 @@ FROM
     Instructor i,Department d, 
     (
         SELECT 
-            dd.dept_id, COUNT(ss.name) as num_of_students 
+            dd.dept_id, COUNT(DISTINCT ss.name) as num_of_students 
         FROM 
             Department dd, Student ss 
         WHERE dd.dept_id = ss.dept_id 
